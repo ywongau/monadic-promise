@@ -1,4 +1,4 @@
-# Monadic promise
+# Monadic Promise
 
 This is an example of using Promise as a monad to handle asynchronicity and errors. 
 The program is composed of pure functions and const is the only JavaScript keyword used
