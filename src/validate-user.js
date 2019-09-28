@@ -33,7 +33,7 @@ const validatePassword = confirmPassword => password =>
     .then(validate(equals(confirmPassword), messages.password.confirm))
     .then(okResult, errorResult);
 
-const checkResults = results =>
+const transformResults = results =>
   results.every(prop('ok'))
     ? Promise.resolve(results.map(prop('value')))
     : Promise.reject(results.filter(propEquals('ok')(false)).map(prop('reason')));
@@ -42,4 +42,4 @@ module.exports = isUserNameAvailable => (userName, password, confirmPassword) =>
   Promise.all([
     validateUserName(isUserNameAvailable)(userName),
     validatePassword(confirmPassword)(password)
-  ]).then(checkResults);
+  ]).then(transformResults);
