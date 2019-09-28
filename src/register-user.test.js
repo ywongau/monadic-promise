@@ -9,10 +9,10 @@ const failIfFulfilled = x =>
 const failIfRejected = x =>
   assert.fail('expect a resolution but was rejected with: ' + x);
 
-const userNameAvailable = userName =>
+const isUserNameAvailable = userName =>
   new Promise(resolve => setTimeout(() => resolve(userName !== 'bob'), 0));
 
-const register = Register(userNameAvailable);
+const register = Register(isUserNameAvailable);
 
 it('resolves with a tuple if passed', () =>
   register('fred', aValidPassword, aValidPassword).then(
