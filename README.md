@@ -12,3 +12,7 @@ A validation function:
 - See the flowchart and [test cases](./src/validate-user.test.js) for details
 
 <img src="img/flowchart.png" width="500px">
+
+## Test
+- 'npm test' to start an auto re-run mocha test
+- 'npm run build' to run a [stryker-mutator](https://github.com/stryker-mutator) mutation test, to show off the 100% true coverage by TDD
