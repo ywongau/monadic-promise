@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha src -w"
+    "test": "mocha src -w",
+    "bulid": "stryker run"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,10 @@
     "mocha": "^6.2.0"
   },
   "devDependencies": {
+    "@stryker-mutator/core": "^2.1.0",
+    "@stryker-mutator/javascript-mutator": "^2.1.0",
+    "@stryker-mutator/mocha-framework": "^2.1.0",
+    "@stryker-mutator/mocha-runner": "^2.1.0",
     "@types/chai": "^4.2.1",
     "@types/mocha": "^5.2.7"
   }
